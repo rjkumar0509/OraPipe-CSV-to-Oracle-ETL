@@ -35,7 +35,7 @@ It eliminates the manual overhead of table creation, enforces clean and consiste
 ### Clone the repository:  
 1. git clone https://github.com/yourusername/OraPipe-CSV-to-Oracle-ETL.git                     
 2. cd OraPipe-CSV-to-Oracle-ETL
-3. python orapipe.py
+3. python orapipe_importer.py
 
 When prompted, provide the following inputs:
 - **DSN (Data Source Name): Host, port, and service name for your Oracle instance.
