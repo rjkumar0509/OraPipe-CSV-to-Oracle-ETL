@@ -38,28 +38,30 @@ git clone https://github.com/yourusername/OraPipe-CSV-to-Oracle-ETL.git
 cd OraPipe-CSV-to-Oracle-ETL
 
 ### Provide the required inputs when prompted:  
-
 - **DSN (Data Source Name):** Host, port, and service name for your Oracle instance.  
 - **Folder Path:** The path containing your CSV files.  
 
 ---
 
-## OraPipe will:  
-
-✅ Create Oracle tables dynamically from the CSV headers  
-✅ Normalize and clean the data  
-✅ Import all CSV files from the folder into the database  
----
-
-## 🛠 Roadmap  
-
-- [ ] Add support for **JSON** and **Excel** imports  
-- [ ] Implement **advanced data type inference** (dates, booleans)  
-- [ ] Enable **config file support** for automation  
+When prompted, provide the following inputs:
+- **DSN (Data Source Name): Host, port, and service name for your Oracle instance.
+- **Folder Path: The path containing your CSV files.
 
 ---
 
-## 🤝 Contributing  
+✅ What OraPipe Does
 
-Contributions are welcome! 🎉  
-If you’d like to improve **OraPipe**, please fork the repo, create a feature branch, and submit a pull request.  
+Creates Oracle tables dynamically from the CSV headers
+Normalizes and cleans column names for compatibility
+Converts invalid numeric values to NULL
+Imports all CSV files from the specified folder into the database
+
+📝 Example DSN Configuration
+import oracledb
+
+dsn = oracledb.makedsn(
+    host="your_host",
+    port=1521,
+    service_name="ODSD"
+)
+---
