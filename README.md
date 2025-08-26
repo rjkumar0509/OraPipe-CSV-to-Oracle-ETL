@@ -37,12 +37,6 @@ It eliminates the manual overhead of schema creation, enforces clean and consist
 git clone https://github.com/yourusername/OraPipe-CSV-to-Oracle-ETL.git
 cd OraPipe-CSV-to-Oracle-ETL
 
-### Provide the required inputs when prompted:  
-- **DSN (Data Source Name):** Host, port, and service name for your Oracle instance.  
-- **Folder Path:** The path containing your CSV files.  
-
----
-
 When prompted, provide the following inputs:
 - **DSN (Data Source Name): Host, port, and service name for your Oracle instance.
 - **Folder Path: The path containing your CSV files.
@@ -51,17 +45,8 @@ When prompted, provide the following inputs:
 
 ✅ What OraPipe Does
 
-Creates Oracle tables dynamically from the CSV headers
-Normalizes and cleans column names for compatibility
-Converts invalid numeric values to NULL
-Imports all CSV files from the specified folder into the database
+- Creates Oracle tables dynamically from the CSV headers
+- Normalizes and cleans column names for compatibility
+- Converts invalid numeric values to NULL
+- Imports all CSV files from the specified folder into the database
 
-📝 Example DSN Configuration
-import oracledb
-
-dsn = oracledb.makedsn(
-    host="your_host",
-    port=1521,
-    service_name="ODSD"
-)
----
