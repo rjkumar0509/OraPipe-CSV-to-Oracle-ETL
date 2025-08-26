@@ -1,63 +1,65 @@
-OraPipe is a lightweight, schema-aware ETL pipeline that transforms raw CSV files into structured Oracle database tables — automatically.
-It eliminates the manual overhead of schema creation, enforces clean and consistent data, and streamlines multi-file imports with ease.
+# 📦 OraPipe-CSV-to-Oracle-ETL  
 
-✨ Features
+**OraPipe** is a lightweight, schema-aware ETL pipeline that transforms raw CSV files into structured Oracle database tables — automatically.  
+It eliminates the manual overhead of schema creation, enforces clean and consistent data, and streamlines multi-file imports with ease.  
 
-Dynamic Table Creation → Automatically builds Oracle database tables based on CSV headers. No manual schema setup required.
-Clean & Consistent Data → Normalizes column names for Oracle compatibility and converts invalid numeric values to NULL for data integrity.
-Batch File Support → Import multiple CSV files from a specified folder in one execution.
-Interactive Setup → Prompts for DSN connection details and CSV folder path, ensuring flexible use across environments.
+---
 
-📦 Requirements
+## ✨ Features  
 
-Python 3.8+
-Oracle Client Libraries
- (via oracledb)
-Pandas
-SQLAlchemy
+- 🚀 **Dynamic Table Creation** → Builds Oracle database tables automatically based on CSV headers.  
+- 🧹 **Clean & Consistent Data** → Normalizes column names for Oracle compatibility and converts invalid numeric values to `NULL`.  
+- 📂 **Batch File Support** → Import multiple CSV files from a folder in a single run.  
+- 🎛 **Interactive Setup** → Prompts for DSN connection details and CSV folder path, ensuring flexible usage across environments.  
 
-⚙️ Installation
+---
 
-Install Python (3.8 or later) from python.org/downloads
-Install dependencies:
-pip install sqlalchemy oracledb pandas
+## 📦 Requirements  
 
+- Python **3.8+**  
+- [Oracle Client Libraries](https://python-oracledb.readthedocs.io/en/latest/user_guide/installation.html) (via `oracledb`)  
+- [Pandas](https://pypi.org/project/pandas/)  
+- [SQLAlchemy](https://pypi.org/project/SQLAlchemy/)  
 
-🚀 Usage
+---
 
-Clone the repository:
+## ⚙️ Installation  
 
+1. Install **Python** (3.8 or later) from [python.org](https://www.python.org/downloads/).  
+2. Install required dependencies:  
+   ```bash
+   pip install sqlalchemy oracledb pandas
+
+## 🚀 Usage  
+
+### Clone the repository:  
+```bash
 git clone https://github.com/yourusername/OraPipe-CSV-to-Oracle-ETL.git
 cd OraPipe-CSV-to-Oracle-ETL
 
+### Provide the required inputs when prompted:  
 
-Run the script:
+- **DSN (Data Source Name):** Host, port, and service name for your Oracle instance.  
+- **Folder Path:** The path containing your CSV files.  
 
-python orapipe.py
+---
 
-Provide the required inputs when prompted:
-DSN (Data Source Name): Host, port, and service name for your Oracle instance.
-Folder Path: The path containing your CSV files.
+## OraPipe will:  
 
-OraPipe will:
-Create Oracle tables dynamically from the CSV headers.
-Normalize and clean the data.
-Import all CSV files from the folder into the database.
+✅ Create Oracle tables dynamically from the CSV headers  
+✅ Normalize and clean the data  
+✅ Import all CSV files from the folder into the database  
+---
 
-📖 Example DSN Configuration
-import oracledb
+## 🛠 Roadmap  
 
-dsn = oracledb.makedsn(
-    host="your_host",
-    port=1521,
-    service_name="ODSD"
-)
+- [ ] Add support for **JSON** and **Excel** imports  
+- [ ] Implement **advanced data type inference** (dates, booleans)  
+- [ ] Enable **config file support** for automation  
 
-🛠 Roadmap
+---
 
- Add support for JSON and Excel imports
- Advanced data type inference (dates, booleans)
- Config file support for automation
-  
+## 🤝 Contributing  
 
-
+Contributions are welcome! 🎉  
+If you’d like to improve **OraPipe**, please fork the repo, create a feature branch, and submit a pull request.  
