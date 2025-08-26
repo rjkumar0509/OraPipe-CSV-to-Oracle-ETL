@@ -44,10 +44,10 @@ When prompted, provide the following inputs:
 
 ✅ What OraPipe Does
 
-- Creates Oracle tables dynamically from the CSV headers
+- Creates a default Oracle table LOAD_CSV_DATA with columns as the csv headers and loads the csv data under the schema of your choice dynamically.
 - Normalizes and cleans column names for compatibility
 - Converts invalid numeric values to NULL
-- Imports all CSV files from the specified folder into the database
+- Imports all CSV files from the specified folder into the database table
 
 ## 🛠 Roadmap  
 
